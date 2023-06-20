@@ -1,0 +1,17 @@
+syntax = "proto3";
+ 
+option go_package = "../pbs/;pb";
+package pb;
+ 
+message Student {
+  string name = 1;
+  int32 age = 2;
+}
+ 
+message Class {
+  string className = 1;
+}
+ 
+service FindClass {
+  rpc MyClass(Student) returns (Class){}
+}
