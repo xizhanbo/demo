@@ -26,3 +26,5 @@ func generatePreorderString(root *TwoTreeNode) string {
 	right := generatePreorderString(root.Right)
 	return fmt.Sprintf(",%d%s%s", root.Val, left, right)
 }
+
+//时间复杂度为O(m×n)。

@@ -18,6 +18,7 @@
 1  3  -1  -3 [5  3  6] 7       5
 1  3  -1  -3  5 [3  6  7]      6
 因此，返回该滑动窗口的中位数数组 [1,-1,-1,3,5,6]。
+该函数的时间复杂度为O(nklogk)，其中n 表示数组元素个数，k 表示窗口大小
 ————————————————
 */
 package main
@@ -40,7 +41,7 @@ func window(num []int) float64 {
 }
 func main() {
 	nums := [...]int{1, 3, -1, -3, 5, 3, 6, 7}
-	wLen := 4
+	wLen := 4 //窗口大小
 	result := make([]float64, len(nums)-wLen+1)
 	i := 0
 	for slow := 0; slow <= len(nums)-wLen; slow++ {

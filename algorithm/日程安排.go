@@ -10,6 +10,7 @@ type Schedule struct {
 	End   time.Time // 结束时间
 }
 
+// O(1)
 func between(a, c Schedule) bool {
 	astart := a.Start.Unix()
 	aend := a.End.Unix()

@@ -24,6 +24,7 @@ func (nl *nodeList) add(n *node) {
 	nl.list[n.name] = n
 }
 
+// O(n)
 func (nl *nodeList) selectMaxNode() bool {
 	maxNode := new(node)
 	total := 0

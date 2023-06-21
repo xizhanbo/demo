@@ -6,7 +6,7 @@ func findPeakElement(nums []int) int {
 	return findPeakElementHelper(nums, 0, len(nums)-1)
 }
 
-// 二分法
+// 二分法 log2N
 func findPeakElementHelper(nums []int, left, right int) int {
 	if left == right { // 如果数组中只有一个元素，则它就是峰值元素
 		return left

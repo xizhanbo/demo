@@ -7,7 +7,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//反转单链表
+// 反转单链表 O(n)
 func reverseList(head *ListNode) *ListNode {
 	cur := head
 	var pre *ListNode
@@ -40,7 +40,7 @@ func CreateNode(node *ListNode, max int) {
 	}
 }
 
-//打印链表的方法
+// 打印链表的方法
 func PrintNode(info string, node *ListNode) {
 	fmt.Print(info)
 	for cur := node; cur != nil; cur = cur.Next {

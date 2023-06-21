@@ -7,6 +7,7 @@ import (
 
 const MAX = 101
 
+// O(n)
 func main() {
 	var D [MAX][MAX]int
 	var n int

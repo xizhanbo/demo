@@ -6,6 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// O(n)
 func levelOrder(root *TreeNode) [][]int {
 	// 定义结果列表和队列
 	var res [][]int

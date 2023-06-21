@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// O(n)
 func findPeakElements(nums []int) []int {
 	n := len(nums)
 	if n == 1 { // 特殊情况：数组中只有一个元素

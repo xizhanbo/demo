@@ -17,3 +17,5 @@ func longestCommonPrefix(strs []string) string {
 	}
 	return prefix
 }
+
+//时间复杂度O(1)

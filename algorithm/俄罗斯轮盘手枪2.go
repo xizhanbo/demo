@@ -15,27 +15,19 @@ func playGame() {
 	fmt.Println("弹药膛中有一颗子弹，游戏即将开始！")
 
 	currentChamber := 0 // 当前弹药膛的位置
+	playerMap := map[int]string{
+		0: "玩家一",
+		1: "玩家二",
+		2: "玩家三",
+		3: "玩家四",
+		4: "玩家五",
+		5: "玩家六",
+	}
 OuterLoop:
 	for {
 		for i := 0; i < numOfChambers; i++ {
 			chamberWithBullet := rand.Intn(numOfChambers) // 随机选取一个弹药膛放置子弹
-			var player string
-
-			switch i {
-			case 0:
-				player = "玩家一"
-			case 1:
-				player = "玩家二"
-			case 2:
-				player = "玩家三"
-			case 3:
-				player = "玩家四"
-			case 4:
-				player = "玩家五"
-			case 5:
-				player = "玩家六"
-			}
-
+			player := playerMap[i]
 			if currentChamber == chamberWithBullet {
 				fmt.Println(player, "中了子弹！他被淘汰了！")
 				break OuterLoop
@@ -52,3 +44,5 @@ OuterLoop:
 func main() {
 	playGame()
 }
+
+//时间复杂度O(1)
